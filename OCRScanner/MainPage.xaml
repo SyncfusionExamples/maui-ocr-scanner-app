@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OCRScanner.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="10"
+            Spacing="18"
+            VerticalOptions="Center">
+            <CollectionView ItemsLayout="HorizontalList" ItemsSource="{Binding Items}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*" />
+                                <RowDefinition Height="2*" />
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0"  WidthRequest="200" HeightRequest="250" Source="{Binding ImagePath}">
+                            </Image>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label
+                Text="OCR Scanner application"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Select image or capture using camera"
+                FontSize="14"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Select Image"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="CameraBtn"
+                Text="Open Camera"
+                Clicked="OnCameraClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="ConvertBtn"
+                Text="Convert to PDF"
+                Clicked="OnConvertClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
