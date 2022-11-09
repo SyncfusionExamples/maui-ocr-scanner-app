@@ -13,8 +13,8 @@ namespace OCRScanner
 {
     class AzureOcrEngine : IOcrEngine
     {
-        private string subscriptionKey = "aca235639feb4047acd1e59ed70caed3";
-        private string endpoint = "https://docan.cognitiveservices.azure.com/";
+        private string subscriptionKey = "provide subscription key here";
+        private string endpoint = "provide endpoint link here";
 
         public OCRLayoutResult PerformOCR(Stream imgStream)
         {
