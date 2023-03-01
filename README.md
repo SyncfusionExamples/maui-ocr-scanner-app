@@ -15,6 +15,7 @@ In this application, we get images from the user in the following ways:
 * Select images from the device's photo gallery.
 
 **Open camera and capture image**
+
 Add a button in the UI to open the camera.
 
 ```csharp
